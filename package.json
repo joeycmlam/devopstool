@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/devopstool/src/app-playloader/config/config.json",
-    "test:cucumber": "cucumber-js --require src/test/cucumber/step_definitions --require src/test/cucumber/support --format json:./reports/cucumber_report.json --format progress src/test/cucumber/features"
+    "test:cucumber": "cucumber-js --config test/cucumber.config.js  --format json:./reports/cucumber_report.json --format progress src/*/test/features"
   },
   "keywords": [],
   "author": "",
