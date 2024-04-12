@@ -1,6 +1,23 @@
+# ignore env files
+env
+.env.local
+
+# ignore all .log files
+log/
+*.log
+cucumber-report.json
+cucumber.html
+
+# ignore the node_modules directory
+# ignore the build directory
+dist/
+node_modules/
+
 # Default ignored files
 /shelf/
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-node_modules/
+
+
+
