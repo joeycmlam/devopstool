@@ -12,18 +12,18 @@ export default class Logger {
   }
 
   static {
-    let config: { filename?: string, level?: string } = { filename: path.basename('app'), level: 'info' };
+    Logger.config = { filename: path.basename('app'), level: 'info' };
 
     const logFilePattern = 'yyyyMMdd.log';
-    const fileName = config.filename || 'app';
+    const fileName = Logger.config.filename || 'app';
 
     log4js.configure({
       appenders: {
-        fileAppender: { type: 'dateFile', filename: config.filename, pattern: logFilePattern, alwaysIncludePattern: true, keepFileExt: true },
+        fileAppender: { type: 'dateFile', filename: Logger.config.filename, pattern: logFilePattern, alwaysIncludePattern: true, keepFileExt: true },
         console: { type: 'console' },
       },
       categories: {
-        default: { appenders: ['fileAppender', 'console'], level: config.level || 'info' },
+        default: { appenders: ['fileAppender', 'console'], level: Logger.config.level || 'info' },
       },
     });
 
