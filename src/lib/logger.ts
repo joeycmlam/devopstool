@@ -26,23 +26,18 @@ export default class Logger {
       };
     }
 
-  }
-  
-  private constructor(config: { filename?: string, level?: string }) {
     const logFilePattern = 'yyyyMMdd.log';
-    Logger.config = config;
-
-    const fileName = Logger.config.filename || 'app';
-    const level = Logger.config.level || 'info';
+    const fileName = config.filename || 'app';
 
     log4js.configure({
       appenders: {
-        fileAppender: { type: 'dateFile', filename: fileName, pattern: logFilePattern, alwaysIncludePattern: true, keepFileExt: true },
+        fileAppender: { type: 'dateFile', filename: config.filename, pattern: logFilePattern, alwaysIncludePattern: true, keepFileExt: true },
         console: { type: 'console' },
       },
       categories: {
-        default: { appenders: ['fileAppender', 'console'], level: level },
+        default: { appenders: ['fileAppender', 'console'], level: config.level || 'info' },
       },
     });
+
   }
 }
