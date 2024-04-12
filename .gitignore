@@ -7,6 +7,7 @@ log/
 *.log
 cucumber-report.json
 cucumber.html
+cucumber/
 
 # ignore the node_modules directory
 # ignore the build directory

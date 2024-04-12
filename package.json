@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/devopstool/src/app-playloader/config/config.json"
+    "start": "ts-node src/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/devopstool/src/app-playloader/config/config.json",
+    "test:cucumber": "cucumber-js --require src/test/cucumber/step_definitions --require src/test/cucumber/support --format json:./reports/cucumber_report.json --format progress src/test/cucumber/features"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@cucumber/cucumber": "^10.4.0",
     "@types/node": "^20.12.7",
     "exceljs": "^4.4.0",
     "inversify": "^6.0.2",

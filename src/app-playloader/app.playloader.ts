@@ -22,7 +22,7 @@ class Main {
         const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
 
         const logger = Logger.getLogger();
-        Logger.configure(config.logger); 
+        Logger.configure(config.logger);
 
         logger.info('start');
 
@@ -37,9 +37,6 @@ class Main {
         logger.info('end');
 
     }
-
-
-    
 }
 
 const main = container.resolve(Main);

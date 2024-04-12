@@ -4,9 +4,14 @@ import excelHelper from '../lib/excelHelper';
 import JsonFileWriter from './JsonFileWriter';
 import { IDataTransformer } from './IDataTransformer';
 
+
 @injectable()
 export default class ExcelToJsonConverter {
-  constructor(private config: any, private excelReader: excelHelper, private dataTransformer: IDataTransformer, private jsonFileWriter: JsonFileWriter) {}
+  constructor(
+    private config: any, 
+    private excelReader: excelHelper, 
+    private dataTransformer: IDataTransformer, 
+    private jsonFileWriter: JsonFileWriter) {}
 
   public async convert(filePath: string, outputDir: string): Promise<any> {
     const workbook = await this.excelReader.read(filePath);
