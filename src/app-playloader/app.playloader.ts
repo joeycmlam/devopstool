@@ -6,10 +6,9 @@ import excelHelper from '../lib/excelHelper';
 import { IDataTransformer } from './IDataTransformer';
 import * as fs from 'fs';
 import minimist from 'minimist';
-import { inject, injectable } from 'inversify';
+import { inject } from 'inversify';
 import container from './container';
 
-@injectable()
 class Main {
     constructor(@inject('IDataTransformer') private dataTransformer: IDataTransformer) { }
 
