@@ -12,6 +12,7 @@ cucumber.html
 # ignore the build directory
 dist/
 node_modules/
+output/
 
 # Default ignored files
 /shelf/

@@ -1,6 +1,6 @@
 {
     "source": {
-        "inputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/data",
+        "inputPath": "/Users/joeylam/repo/njs/devopstool/src/app-playloader/data",
         "inputFile": "sample.10.xlsx"
     },
     "dataformat": {
@@ -12,6 +12,6 @@
         "dataEndCol": 3
     },
     "output": {
-        "outputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/output"
+        "outputPath": "/Users/joeylam/repo/njs/devopstool/src/app-playloader/output"
     }    
 }
