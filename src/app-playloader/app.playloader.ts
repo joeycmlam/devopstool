@@ -22,7 +22,7 @@ class Main {
         const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
 
         const logger = Logger.getLogger();
-        Logger.configure(config.logger.level, config.logger.path, config.logger.filename); 
+        Logger.configure(config.logger); 
 
         logger.info('start');
 

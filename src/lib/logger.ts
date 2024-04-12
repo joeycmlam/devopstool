@@ -2,17 +2,21 @@ import * as log4js from 'log4js';
 import path from 'path';
 import 'reflect-metadata';
 
+export interface LoggerConfig {
+  level?: string;
+  path?: string;
+  filename?: string;
+}
+
 export default class Logger {
-  private static config: {level?: string, path?: string,  filename?: string } = { level: 'info' };
+  private static config: LoggerConfig = { level: 'info' };
 
   static getLogger(): log4js.Logger {
     return log4js.getLogger();
   }
 
-  static configure(level: string, path: string, filename: string) {
-    Logger.config.level = level;
-    Logger.config.path = path;
-    Logger.config.filename = filename;
+  static configure(config: LoggerConfig) {
+    Logger.config = config;
     Logger.setConfigure();
   }
 
