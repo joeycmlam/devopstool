@@ -11,10 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^20.12.7",
+    "exceljs": "^4.4.0",
     "inversify": "^6.0.2",
     "js-yaml": "^4.1.0",
     "log4js": "^6.9.1",
-    "minimist": "^1.2.8"
+    "minimist": "^1.2.8",
+    "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",

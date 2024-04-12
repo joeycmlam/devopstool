@@ -6,7 +6,6 @@ import 'reflect-metadata';
 
 
 export default class Logger {
-  private static instance: Logger;
   private static config: { filename?: string, level?: string };
 
   static getLogger(): log4js.Logger {
@@ -28,7 +27,6 @@ export default class Logger {
       };
     }
 
-    Logger.instance = new Logger(config);
   }
   
   private constructor(config: { filename?: string, level?: string }) {
