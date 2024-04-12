@@ -1,0 +1,37 @@
+{
+    "isbn": "234-456-2210",
+    "id": "12345678",
+    "issue": "US",
+    "author": {
+      "lastname": "Shawn",
+      "firstname": "Peter"
+    },
+    "category": [
+      "Non-Fiction",
+      "Technology"
+    ],
+    "totalamount": 27750.12,
+    "address": {
+      "home": {
+        "line1": "Address Line1",
+        "line2": "Address Line2",
+        "line3": "Address Line 3",
+        "country": "SG"
+      }
+    },
+    "isCertified": true,
+    "isSigned": false,
+    "intructionDateTime": "2024-04-04 17:28:34.590Z",
+    "funds": [
+      {
+        "code": "ABCD",
+        "investmentAmt": 20000,
+        "investmentcury": "HKD"
+      },
+      {
+        "code": "EFGH",
+        "investmentAmt": 1000,
+        "investmentcury": "USD"
+      }
+    ]
+  }

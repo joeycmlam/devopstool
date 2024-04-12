@@ -1,0 +1,17 @@
+{
+  "name": "devopstool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/njstool/src/app-playloader/config/config.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.12.7",
+    "inversify": "^6.0.2",
+    "minimist": "^1.2.8"
+  }
+}
