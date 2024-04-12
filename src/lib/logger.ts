@@ -4,7 +4,6 @@ import fs from 'fs';
 import yaml from 'js-yaml';
 import 'reflect-metadata';
 
-
 export default class Logger {
   private static config: { filename?: string, level?: string };
 
@@ -22,7 +21,7 @@ export default class Logger {
     } catch (err) {
       // Default configuration
       config = {
-        filename: 'app',
+        filename: path.basename('app'),
         level: 'info'
       };
     }
