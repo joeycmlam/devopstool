@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "es6",
+      "sourceMap": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "inlineSourceMap": false,
+      "inlineSources": true,
+      "declaration": true,
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": [
+      "src/app/app-fee-engine/",
+      "src/app/lib/dbConnection.ts",
+      "node_modules"
+    ]
+  }
