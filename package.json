@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/njstool/src/app-playloader/config/config.json"
+    "start": "ts-node src/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/devopstool/src/app-playloader/config/config.json"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,11 @@
   "dependencies": {
     "@types/node": "^20.12.7",
     "inversify": "^6.0.2",
+    "js-yaml": "^4.1.0",
+    "log4js": "^6.9.1",
     "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
   }
 }
