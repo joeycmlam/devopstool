@@ -3,6 +3,7 @@ env
 .env.local
 
 # ignore all .log files
+logs/
 log/
 *.log
 cucumber-report.json

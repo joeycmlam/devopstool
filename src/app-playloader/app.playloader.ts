@@ -15,14 +15,17 @@ class Main {
 
     public async run() {
 
-        const logger = Logger.getLogger();
-
-        logger.info('start');
         // Load configuration
         // Get the config file path from the command line arguments
         const args = minimist(process.argv.slice(2));
         const configFile = args.config || path.join(__dirname, 'config.json');
         const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+
+        const logger = Logger.getLogger();
+        Logger.configure(config.logger.level, config.logger.path, config.logger.filename); 
+
+        logger.info('start');
+
 
         const inFile = path.join(config.source.inputPath, config.source.inputFile);
         const outFilePath = config.output.outputPath;

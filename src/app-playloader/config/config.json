@@ -13,5 +13,10 @@
     },
     "output": {
         "outputPath": "/Users/joeylam/repo/njs/devopstool/src/app-playloader/output"
+    },
+    "logger": {
+        "level": "info",
+        "path": "/Users/joeylam/repo/njs/devopstool/src/app-playloader/logs",
+        "filename": "app-playloader"
     }    
 }
