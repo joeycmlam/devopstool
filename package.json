@@ -2,9 +2,14 @@
   "name": "devopstool",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.playloader.js",
+  "bin": {
+    "devopstool": "./dist/app-playloader/app.playloader.js"
+  },
   "scripts": {
     "start": "ts-node src/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/devopstool/src/app-playloader/config/config.json",
+    "build": "tsc",
+    "build:binary": "tsc && pkg -t node18-win-x64,node18-macos-x64 .",
     "test": "npm run test:cucumber",
     "test:cucumber": "c8 cucumber-js --config test/cucumber.config.js  src/**/test/features/*.feature",
     "test:cucumber:report": "node test/generate-cucumber-html.js",
@@ -32,6 +37,7 @@
     "cucumber-html-reporter": "^6.0.0",
     "istanbul-api": "^3.0.0",
     "jest": "^29.7.0",
+    "pkg": "^5.8.1",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2"
   }
