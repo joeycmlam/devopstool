@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/devopstool/src/app-playloader/config/config.json",
-    "test:cucumber": "cucumber-js --config test/cucumber.config.js  src/**/test/features/*.feature",
-    "test:cucumber:report": " node test/generate-cucumber-html.js",
-    "test:jest": "jest --coverage --coverageDirectory=coverage-jest"
+    "test:cucumber": "c8 cucumber-js --config test/cucumber.config.js  src/**/test/features/*.feature",
+    "test:cucumber:report": "node test/generate-cucumber-html.js",
+    "test:jest": "jest --coverage --coverageDirectory=coverage-jest",
+    "launch-coverage": "node merge-coverage.js && node generate-cucumber-html.js && open coverage/index.html"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +27,9 @@
     "@types/jest": "^29.5.12",
     "@types/js-yaml": "^4.0.9",
     "@types/minimist": "^1.2.5",
+    "c8": "^9.1.0",
     "cucumber-html-reporter": "^6.0.0",
+    "istanbul-api": "^3.0.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2"
