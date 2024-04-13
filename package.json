@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/devopstool/src/app-playloader/config/config.json",
+    "test": "npm run test:cucumber",
     "test:cucumber": "c8 cucumber-js --config test/cucumber.config.js  src/**/test/features/*.feature",
     "test:cucumber:report": "node test/generate-cucumber-html.js",
     "test:jest": "jest --coverage --coverageDirectory=coverage-jest",

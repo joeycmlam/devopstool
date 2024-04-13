@@ -13,7 +13,7 @@
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true
     },
-    "include": ["./src/**/*.ts"],
+    "include": ["./src/**/*.ts", "src/lib/test/jest.stringHelper.js"],
     "exclude": [
       "src/app/app-fee-engine/",
       "src/app/lib/dbConnection.ts",
